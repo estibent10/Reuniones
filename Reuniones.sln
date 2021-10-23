@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Reuniones.BD", "Reuniones.BD\Reuniones.BD.sqlproj", "{29288C17-3286-48E1-BA6E-3928D64F0AC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reuniones.API", "Reuniones.API\Reuniones.API.csproj", "{63E1D4BA-8663-48D9-832C-60179A5F0FB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29288C17-3286-48E1-BA6E-3928D64F0AC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{63E1D4BA-8663-48D9-832C-60179A5F0FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E1D4BA-8663-48D9-832C-60179A5F0FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E1D4BA-8663-48D9-832C-60179A5F0FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E1D4BA-8663-48D9-832C-60179A5F0FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0508585B-99A3-44A7-AA56-B55F72554133}
+	EndGlobalSection
+EndGlobal
