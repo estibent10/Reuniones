@@ -6,7 +6,7 @@ GO
 
 --Tabla Compañias----------------------------
 CREATE TABLE Companias(
-	Ced_Juridica VARCHAR(12),
+	Cedula_Juridica VARCHAR(12),
 	Nombre VARCHAR(60) NOT NULL,	
 	
 	Razon_Social VARCHAR(100) NULL,
@@ -20,14 +20,14 @@ CREATE TABLE Companias(
 	ModificadoPor VARCHAR(60) NULL,
 	
  CONSTRAINT PK_Companias 
- PRIMARY KEY (Ced_Juridica)
+ PRIMARY KEY (Cedula_Juridica)
  )
  GO
 
  --DROP TABLE Companias
  --GO
 
- INSERT INTO Companias(Ced_Juridica, Nombre, Razon_Social, Resena_Empresarial)
+ INSERT INTO Companias(Cedula_Juridica, Nombre, Razon_Social, Resena_Empresarial)
  VALUES
  ('3-0009-1128', 'BANCO CREDITO AGRICOLA DE CARTAGO', 'Ejemplo Razón Social', 'Préstamos, Ahorros, Transferencias'),
  ('3-1232-1422', 'BANCO NACIONAL', 'Ejemplo Razón Social 2', 'Préstamos, Ahorros, Transferencias, SINPE-MOVIL')
@@ -49,17 +49,17 @@ CREATE TABLE Despachos(
 	CreadoPor VARCHAR(60) NULL,	
 	ModificadoPor VARCHAR(60) NULL,	
 	
-	Ced_JuridicaCompania VARCHAR(12) NOT NULL,
+	Cedula_JuridicaCompania VARCHAR(12) NOT NULL,
 
  CONSTRAINT PK_Despachos PRIMARY KEY (Id),
- CONSTRAINT FK_Companias FOREIGN KEY (Ced_JuridicaCompania) REFERENCES Companias (Ced_Juridica)
+ CONSTRAINT FK_Companias FOREIGN KEY (Cedula_JuridicaCompania) REFERENCES Companias (Cedula_Juridica)
  )
  GO
 
  --DROP TABLE Despachos
  --GO
 
- INSERT INTO Despachos(Nombre, Ubicacion, Telefono, Ced_JuridicaCompania)
+ INSERT INTO Despachos(Nombre, Ubicacion, Telefono, Cedula_JuridicaCompania)
  VALUES
  ('SUCURSAL SAN JOSE', 'COSTADO ESTE DEL PARQUE CENTRAL', '2221-2123','3-0009-1128'),
  ('SUCURSAL ALAJUELA', 'COSTADO SUR DE CORREOS DE COSTA RICA', '4221-2123','3-1232-1422' )
@@ -105,3 +105,15 @@ GO
  SELECT * FROM Citas
  GO
 
+ ----agregar documentación a tablas
+EXEC sp_updateextendedproperty 
+    @name = N'MS_Description4', @value = 'Compañias o sucursales que el sistema gestiona',
+    @level0type = N'Schema', @level0name = 'dbo',
+    @level1type = N'Table', @level1name = 'Companias'
+
+----agregar documentación a campos
+EXEC sp_addextendedproperty 
+    @name = N'MS_Description', @value = 'Cédula Jurídica de la Empresa',
+    @level0type = N'Schema', @level0name = 'dbo',
+    @level1type = N'Table', @level1name = 'Companias', 
+    @level2type = N'Column', @level2name = 'Cedula_Juridica'

@@ -59,7 +59,8 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables\" />
-    <Folder Include="DiagramaE-R" />
+    <Folder Include="DiagramaModeloRelacional" />
+    <Folder Include="DiccionarioDeDatos" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Companias.sql" />
@@ -68,7 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Reuniones.BD.publish.xml" />
-    <None Include="DiagramaE-R\intgegridad referencial.PNG" />
+    <None Include="DiagramaModeloRelacional\ModeloRelacional-Reuniones.PNG" />
+    <None Include="DiccionarioDeDatos\DiccionarioDeDatos-Reuniones.docx" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
