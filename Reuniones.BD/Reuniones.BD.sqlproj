@@ -61,11 +61,7 @@
     <Folder Include="Tables\" />
     <Folder Include="DiagramaModeloRelacional" />
     <Folder Include="DiccionarioDeDatos" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="Tables\Companias.sql" />
-    <Build Include="Tables\Despachos.sql" />
-    <Build Include="Tables\Citas.sql" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Reuniones.BD.publish.xml" />
@@ -74,5 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Companias.sql" />
+    <Build Include="Tables\Despachos.sql" />
+    <Build Include="Tables\Citas.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
   </ItemGroup>
 </Project>
